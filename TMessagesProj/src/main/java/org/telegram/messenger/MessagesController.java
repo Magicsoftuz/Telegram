@@ -3848,7 +3848,11 @@ public class MessagesController extends BaseController implements NotificationCe
                 putUsers(res.users, false);
                 putChats(res.chats, false);
 
+<<<<<<< HEAD
                 savePeerSettings(dialogId, settings, false);
+=======
+                savePeerSettings(dialogId,  settings, false);
+>>>>>>> 04838730df906ec01243a6789adc3743d664e5d9
             }
         }));
     }
@@ -4807,8 +4811,13 @@ public class MessagesController extends BaseController implements NotificationCe
             getMessagesStorage().deleteUserChatHistory(-currentChat.id, fromId);
         }
         TLRPC.TL_channels_deleteParticipantHistory req = new TLRPC.TL_channels_deleteParticipantHistory();
+<<<<<<< HEAD
         req.channel = getInputChannel(currentChat);
         req.participant = fromUser != null ? getInputPeer(fromUser) : getInputPeer(fromChat);
+=======
+        req.channel = getInputChannel(chat);
+        req.participant = getInputPeer(user);
+>>>>>>> 04838730df906ec01243a6789adc3743d664e5d9
         getConnectionsManager().sendRequest(req, (response, error) -> {
             if (error == null) {
                 TLRPC.TL_messages_affectedHistory res = (TLRPC.TL_messages_affectedHistory) response;

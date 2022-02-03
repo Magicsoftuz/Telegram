@@ -20,8 +20,13 @@ public class BuildVars {
     public static boolean USE_CLOUD_STRINGS = true;
     public static boolean CHECK_UPDATES = true;
     public static boolean NO_SCOPED_STORAGE = Build.VERSION.SDK_INT <= 29;
+<<<<<<< HEAD
     public static int BUILD_VERSION = 2547;
     public static String BUILD_VERSION_STRING = "8.5.0";
+=======
+    public static int BUILD_VERSION = 2481;
+    public static String BUILD_VERSION_STRING = "8.3.0";
+>>>>>>> 04838730df906ec01243a6789adc3743d664e5d9
     public static int APP_ID = 4;
     public static String APP_HASH = "014b35b6184100b085b0d0572f9b5103";
     public static String APPCENTER_HASH = "a5b5c4f5-51da-dedc-9918-d9766a22ca7c";
